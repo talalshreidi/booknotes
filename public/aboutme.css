@@ -1,0 +1,159 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#about-me-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    position: relative;
+}
+
+#about-me-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #3498db;
+    margin: 10px auto;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+#about-me-title {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.bio {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666;
+}
+
+.interests-section {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.interests-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#items1 {
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: transform 0.2s ease;
+}
+
+#items1:hover {
+    transform: translateY(-3px);
+    background: #2980b9;
+}
+
+#items2 {
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: transform 0.2s ease;
+}
+
+#items2:hover {
+    transform: translateY(-3px);
+    background: #2980b9;
+}
+
+#items3 {
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: transform 0.2s ease;
+}
+
+#items3:hover {
+    transform: translateY(-3px);
+    background: #2980b9;
+}
+
+#items4 {
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: transform 0.2s ease;
+}
+
+#items4:hover {
+    transform: translateY(-3px);
+    background: #2980b9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+}

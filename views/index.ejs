@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Notes</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+
+    <%- include('partials/header.ejs') %>
+
+    
+     <h1 class="title">Welcome to BookNotes</h1>
+     <div class="container-add">
+        <h2> Click button to add a book 👇</h2>
+        <button class="add-book" onclick="window.location.href='/new'">Add a Book</button>
+
+     </div>
+     
+     <h3 class="title">These are all the books I have read so far 👇</h3>
+    
+     <div class="book-list">
+
+        <% if (books.length === 0) { %>
+            <p class="no-books">
+                No books found. Please add some books to get started!
+            </p>
+       <% } else { %>
+        <% books.forEach(book => { %>
+            <div class="book-item">
+                
+                <a href="/books/<%= book.id %>">
+                    <img src="https://covers.openlibrary.org/b/olid/<%= book.olid%>-M.jpg" alt="Book Cover" class="book-cover">
+ 
+                </a>
+
+            </div>
+        <% }) %> 
+        <% } %>
+        
+
+
+
+     </div>
+         
+    <!-- <img src="https://covers.openlibrary.org/b/olid/OL32670252M-L.jpg" alt="Book Cover" class="book-cover"> -->
+</body>
+</html>

@@ -1,0 +1,105 @@
+html, body, div, span, applet, object, iframe, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    background-color: color-mix(in hsl shorter hue, #f0f0f0 80%, #e0e0e0 20%);
+}
+
+
+.title{
+    text-align: center;
+    font-weight: normal;
+    font-size: 2rem;
+}
+h2{
+    text-align: center;
+    font-weight: normal;
+    font-size: 2rem;
+}
+.container-add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.add-book {
+
+     
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.add-book:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.add-book:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 2rem;
+    padding: 2rem 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-items: center;
+    background: rgba(255,255,255,0.7);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+.book-item {
+    background: linear-gradient(135deg, #f8fafc 60%, #e0e7ef 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(60,60,60,0.08);
+    padding: 1.2rem 1rem 1rem 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-item:hover {
+    transform: translateY(-8px) scale(1.04) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(60,60,60,0.18);
+    background: linear-gradient(135deg, #e0e7ef 60%, #f8fafc 100%);
+}
+
+.book-cover {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    margin-bottom: 0.5rem;
+    border: 2px solid #e0e0e0;
+    background: #fff;
+    transition: box-shadow 0.2s, border 0.2s;
+}
+
+.book-item:hover .book-cover {
+    box-shadow: 0 6px 24px rgba(44, 62, 80, 0.18);
+    border: 2px solid #4CAF50;
+}

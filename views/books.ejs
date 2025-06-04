@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= book.title %> - Book Details</title> 
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/books.css">
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    <div class="book-detail-container">
+        <h1><%= book.title %></h1>
+        <h2>by <%= book.author %></h2>
+        <img src="https://covers.openlibrary.org/b/olid/<%= book.olid %>-L.jpg" alt="Book Cover" class="book-cover">
+        <p><%= book.description %></p>
+        <div class="olid-section">
+            <strong>OLID:</strong>
+            <a class="olid-link" href="https://openlibrary.org/books/<%= book.olid %>" target="_blank" rel="noopener">
+                <%= book.olid %>
+            </a>
+        </div>
+        <a href="/">Back to Home</a>
+        <a href="/books/<%= book.id %>/edit">Edit Book</a>
+        <form action="/books/<%= book.id %>/delete" method="POST" class="delete-form">
+            <button type="submit" class="delete-button">Delete Book</button>
+        </form>
+    </div>
+</body>
+</html>

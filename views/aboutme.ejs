@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title> 
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="aboutme.css">
+
+</head>
+<body>  
+    <%- include('partials/header.ejs') %>
+    <div class="about-container">
+        <h1 id="about-me-title">About Me</h1>
+        <div class="profile-section">
+            <img src="/assets/images/aboutme.jpg" alt="Profile Picture" class="profile-pic">
+            <h2 id="author-title">Hello, I'm Talal Shreidi</h2>
+            <p class="bio">
+                Welcome to my book notes platform! I'm passionate about reading and sharing knowledge.
+                This space is dedicated to collecting and organizing insights from various books.
+            </p>
+        </div>
+        <div class="interests-section">
+            <h3>My Reading Interests</h3>
+            <ul class="interests-list">
+                <li id="items1">Fantasy</li>
+                <li id="items2">Personal Development</li>
+                <li id="items3">Business & Economics</li>
+                <li id="items4">Science & Technology</li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
